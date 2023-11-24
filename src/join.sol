@@ -124,7 +124,7 @@ contract GemJoin {
         ilk = ilk_;
         // 存储erc20 token抵押物合约地址
         gem = GemLike(gem_);
-        // 存储erc29 token抵押物精度
+        // 存储erc20 token抵押物精度
         dec = gem.decimals();
         emit Rely(msg.sender);
     }
