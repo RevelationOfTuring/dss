@@ -181,7 +181,7 @@ contract Vat {
     function file(bytes32 ilk, bytes32 what, uint data) external auth {
         // 要求当前vat合约的active flag为1
         require(live == 1, "Vat/not-live");
-        // 如果what是"spot"，修改该抵押品安全边际的抵押品价格
+        // 如果what是"spot"，修改该抵押品的安全边际抵押品价格
         if (what == "spot") ilks[ilk].spot = data;
         // 如果what是"line"，修改该抵押品的债务上限
         else if (what == "line") ilks[ilk].line = data;
